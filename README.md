@@ -1,2 +1,0 @@
-# remoteSync
-Created with CodeSandbox
