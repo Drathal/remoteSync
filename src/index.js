@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const names = ['Andre', 'Maike 🦄', 'Lior', 'Martin', 'Kevin', 'Byeongsoo', 'Torben', 'Markus']
+const names = ['Andrè', 'Maike 🦄', 'Lior', 'Martin', 'Kevin', 'Byeongsoo', 'Torben', 'Markus 🎧']
 
 let currentPage = 0
 const nameCount = names.length
@@ -59,9 +59,9 @@ class App extends React.Component {
     return (
       <div tabIndex={'0'} onKeyUp={this.onKeyPressed}>
         <Parallax className="container" ref="parallax" pages={pageCount} horizontal scrolling={false}>
-          <Page offset={0} title={'welcome'} name={''} onClick={this.scrollTo(1)} />
+          <Page offset={0} title={'Welcome everyone 👋'} name={''} onClick={this.scrollTo(1)} />
           {names.map((_, i) => <Page offset={i + 1} title={getTitle(i)} onClick={this.scrollTo(i + 2)} key={i} />)}
-          <Page offset={pageCount - 1} title={'Have a nice day'} name={''} onClick={this.scrollTo(0)} />
+          <Page offset={pageCount - 1} title={'Have a nice day 🌞'} name={''} onClick={this.scrollTo(0)} />
         </Parallax>
       </div>
     )
