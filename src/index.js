@@ -8,12 +8,11 @@ const names = ['Andrè', 'Maike 🦄', 'Lior', 'Martin', 'Kevin', 'Byeongsoo', '
 let currentPage = 0
 const nameCount = names.length
 const pageCount = nameCount + 2
-const getIndex = () => Math.floor(Math.random() * Math.floor(names.length))
-const getName = () => names.splice(getIndex(), 1)[0] || ''
-const getGradientIndex = () => Math.floor(Math.random() * Math.floor(4))
+const getRandomNumber = (to) => Math.floor(Math.random() * Math.floor(to))
+const getRandomName = () => names.splice(getRandomNumber(names.length), 1)[0] || ''
 const getTitle = i => (i === 0 ? 'Today we start with' : i === nameCount - 1 ? 'last but not least' : 'Next up')
 
-const Page = ({ offset, title, name = getName(), onClick, gradient = getGradientIndex() }) => (
+const Page = ({ offset, title, name = getRandomName(), onClick, gradient = getRandomNumber(4) }) => (
   <React.Fragment>
     <Parallax.Layer offset={offset} speed={0.2} onClick={onClick}>
       <div className="slopeBegin" />
