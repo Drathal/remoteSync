@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const names = ['Andrè', 'Maike 🦄', 'Lior', 'Martin', 'Kevin', 'Byeongsoo', 'Torben', 'Markus 🎧']
+const names = ['André 😋', 'Maike 🦄', 'Lior', 'Martin', 'Kevin', 'Byeongsoo', 'Torben', 'Markus 🎧']
 
 let currentPage = 0
 const nameCount = names.length
 const pageCount = nameCount + 2
-const getRandomNumber = (to) => Math.floor(Math.random() * Math.floor(to))
+const getRandomNumber = to => Math.floor(Math.random() * Math.floor(to))
 const getRandomName = () => names.splice(getRandomNumber(names.length), 1)[0] || ''
 const getTitle = i => (i === 0 ? 'Today we start with' : i === nameCount - 1 ? 'last but not least' : 'Next up')
 
