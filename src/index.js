@@ -22,6 +22,12 @@ const Page = ({ offset, title, name = getRandomName(), onClick, gradient = getRa
       <div className={`slopeEnd g${gradient}`} />
     </Parallax.Layer>
 
+    {name === 'Kevin' && (
+      <Parallax.Layer offset={offset} speed={15} onClick={onClick}>
+        <img src="http://lesfa.cz/wp-content/uploads/2017/08/Wacken.png" style={{ opacity: 0.8 }} />
+      </Parallax.Layer>
+    )}
+
     <Parallax.Layer className="text header" offset={offset} speed={0.7}>
       <span>
         <p style={{ fontSize: 20 }}>{title}</p>
