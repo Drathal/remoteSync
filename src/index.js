@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin', 'Kevin', 'Byeongsoo🤦', 'Torben', 'Markus 🎧']
+const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben', 'Markus 🎧']
 
 let currentPage = 0
 const nameCount = names.length
