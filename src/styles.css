@@ -2,11 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
 .container {
- background: #20232f;
+  background: #20232f;
 }
 
 .text {
@@ -45,6 +44,10 @@
   cursor: pointer;
 }
 
+.content {
+  font-size: 14px;
+}
+
 .g0 {
   background: linear-gradient(to right, deeppink 0%, coral 100%);
 }
@@ -58,5 +61,5 @@
 }
 
 .g3 {
-  background: linear-gradient(to right, lime 0%, LightSeaGreen  100%);
+  background: linear-gradient(to right, lime 0%, LightSeaGreen 100%);
 }
