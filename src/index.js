@@ -3,8 +3,16 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+let CLOSING_PAGE_CONTNET = '<p><input type=checkbox /> deployment?</p>'
 
+var today = new Date().getDay()
+switch (today) {
+  case 1:
+    CLOSING_PAGE_CONTNET += '<p><input type=checkbox /> techtalk prio and inviting mobile team'
+}
+
+const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+const OPEN_PAGE_CONTENT = '<p>Short and quick, </p><p> no tech discussions or long bug descriptions please</p>'
 let currentPage = 0
 const nameCount = names.length
 const pageCount = nameCount + 2
@@ -12,7 +20,7 @@ const getRandomNumber = to => Math.floor(Math.random() * Math.floor(to))
 const getRandomName = () => names.splice(getRandomNumber(names.length), 1)[0] || ''
 const getTitle = i => (i === 0 ? 'Today we start with' : i === nameCount - 1 ? 'last but not least' : 'Next up')
 
-const Page = ({ offset, title, name = getRandomName(), onClick, gradient = getRandomNumber(4) }) => (
+const Page = ({ content, offset, title, name = getRandomName(), onClick, gradient = getRandomNumber(4) }) => (
   <React.Fragment>
     <Parallax.Layer offset={offset} speed={0.2} onClick={onClick}>
       <div className="slopeBegin" />
@@ -33,6 +41,7 @@ const Page = ({ offset, title, name = getRandomName(), onClick, gradient = getRa
         <p style={{ fontSize: 20 }}>{title}</p>
         <div className={`stripe g${gradient}`} />
         <p>{name}</p>
+        <p dangerouslySetInnerHTML={{ __html: content }} className="content" />
       </span>
     </Parallax.Layer>
   </React.Fragment>
@@ -64,9 +73,11 @@ class App extends React.Component {
     return (
       <div tabIndex={'0'} onKeyUp={this.onKeyPressed}>
         <Parallax className="container" ref="parallax" pages={pageCount} horizontal scrolling={false}>
-          <Page offset={0} title={'Welcome everyone'} name={''} onClick={this.scrollTo(1)} />
-          {names.map((_, i) => <Page offset={i + 1} title={getTitle(i)} onClick={this.scrollTo(i + 2)} key={i} />)}
-          <Page offset={pageCount - 1} title={'Have a nice day'} name={'🌞'} onClick={this.scrollTo(0)} />
+          <Page offset={0} title={'Welcome everyone'} content={OPEN_PAGE_CONTENT} name={''} onClick={this.scrollTo(1)} />
+          {names.map((_, i) => (
+            <Page offset={i + 1} title={getTitle(i)} onClick={this.scrollTo(i + 2)} key={i} />
+          ))}
+          <Page offset={pageCount - 1} content={CLOSING_PAGE_CONTNET} title={'Have a nice day'} name={'🌞'} onClick={this.scrollTo(0)} />
         </Parallax>
       </div>
     )
