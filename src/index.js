@@ -8,7 +8,7 @@ let CLOSING_PAGE_CONTNET = '<p><input type=checkbox /> deployment?</p>'
 var today = new Date().getDay()
 switch (today) {
   case 1:
-    CLOSING_PAGE_CONTNET += '<p><input type=checkbox /> techtalk prio and inviting mobile team'
+    CLOSING_PAGE_CONTNET += '<p><input type=checkbox /> techtalk prio and inviting mobile team</p><p> <p><input type=checkbox /> videolunch videos?</p>'
 }
 
 const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
