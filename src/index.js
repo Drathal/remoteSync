@@ -11,7 +11,7 @@ switch (today) {
     CLOSING_PAGE_CONTNET += '<p><input type=checkbox /> techtalk prio and inviting mobile team</p><p> <p><input type=checkbox /> videolunch videos?</p>'
 }
 
-const names = ['Egson', 'André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+const names = ['Egzon', 'André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
 const OPEN_PAGE_CONTENT = '<p>Short and quick, </p><p> no tech discussions or long bug descriptions please</p>'
 let currentPage = 0
 const nameCount = names.length
