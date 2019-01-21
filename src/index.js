@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
-let CLOSING_PAGE_CONTNET = '<p><input type=checkbox /> deployment?</p>'
+let CLOSING_PAGE_CONTNET = '<p><input type=checkbox /> deployment?</p>';
 
 var today = new Date().getDay()
 switch (today) {
   case 1:
-    CLOSING_PAGE_CONTNET += '<p><input type=checkbox /> techtalk prio and inviting mobile team</p><p> <p><input type=checkbox /> videolunch videos?</p>'
+    CLOSING_PAGE_CONTNET += '<p> videolunch videos?</p>' +
+      '<p> anybody techtalk this week? (remember to invite the mobile team) </p>';
 }
 
-const names = ['Egzon', 'André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+const names = ['Egzon', 'André 😋', 'Maike 🦄', 'Lior 🐃', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+
 const OPEN_PAGE_CONTENT = '<p>Short and quick, </p><p> no tech discussions or long bug descriptions please</p>'
 let currentPage = 0
 const nameCount = names.length
