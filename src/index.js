@@ -12,7 +12,8 @@ switch (today) {
       '<p> anybody techtalk this week? (remember to invite the mobile team) </p>';
 }
 
-const names = ['Egson', 'André 😋', 'Maike 🦄', 'Lior 🐃', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+const names = ['Egzon', 'André 😋', 'Maike 🦄', 'Lior 🐃', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
+
 const OPEN_PAGE_CONTENT = '<p>Short and quick, </p><p> no tech discussions or long bug descriptions please</p>'
 let currentPage = 0
 const nameCount = names.length
