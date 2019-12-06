@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Parallax } from 'react-spring'
 import './styles.css'
 
+// test
 const names = ['André 😋', 'Maike 🦄', 'Lior 🐕', 'Martin 😾', 'Kevin', 'Byeongsoo🤦', 'Torben🧗', 'Markus 🎧']
 
 let currentPage = 0
@@ -24,7 +25,7 @@ const Page = ({ offset, title, name = getRandomName(), onClick, gradient = getRa
 
     {name === 'Kevin' && (
       <Parallax.Layer offset={offset} speed={15} onClick={onClick}>
-        <img src="http://lesfa.cz/wp-content/uploads/2017/08/Wacken.png" style={{ opacity: 0.8 }} />
+        <img src="http://lesfa.cz/wp-content/uploads/2017/08/Wacken.png" style={{ opacity: 0.8 }} alt="wacken" />
       </Parallax.Layer>
     )}
 
